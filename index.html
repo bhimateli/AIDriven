@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Test Dashboard</title>
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+}
+
+/* ---------- LAYOUT ---------- */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar{
+    width:260px;
+    background:linear-gradient(180deg,#020617,#1e293b);
+    box-shadow:4px 0 15px rgba(0,0,0,.4);
+}
+
+.sidebar h2{
+    text-align:center;
+    padding:20px 0;
+    color:#38bdf8;
+}
+
+.menu a{
+    display:block;
+    padding:13px 20px;
+    color:#e2e8f0;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#334155;
+    padding-left:28px;
+}
+
+/* ---------- CONTENT ---------- */
+.content{
+    flex:1;
+    padding:30px;
+    overflow:auto;
+}
+
+/* ---------- CARD ---------- */
+.card{
+    background:#111827;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* ---------- SUMMARY CARDS ---------- */
+.summary{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.summaryCard{
+    flex:1;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.totalCard{
+    background:linear-gradient(45deg,#2563eb,#38bdf8);
+}
+
+.groupCard{
+    background:linear-gradient(45deg,#16a34a,#4ade80);
+}
+
+/* ---------- TABLE ---------- */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#2563eb;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #334155;
+}
+
+tr:hover{
+    background:#1e293b;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+    <h2>AI Driven Menu</h2>
+
+    <div class="menu">
+        <a href="#" onclick="showDashboard()">🏠 Total Test Case</a>
+
+        <a href="ask-api-report-compliance.html">Compliance</a>
+        <a href="ask-api-report-credentialing.html">Credentialing</a>
+        <a href="ask-api-report-denied.html">Denied</a>
+        <a href="ask-api-report-facility_interview.html">Facility Interview</a>
+        <a href="ask-api-report-hwl_interview.html">HWL Interview</a>
+        <a href="ask-api-report-Interview.html">Interview</a>
+        <a href="ask-api-report-offer.html">Offer</a>
+        <a href="ask-api-report-OfferFacility.html">Offer Facility</a>
+        <a href="ask-api-report-offerWithAgency.html">Offer With Agency</a>
+        <a href="ask-api-report-onboarded.html">Onboarded</a>
+        <a href="ask-api-report-orientation.html">Orientation</a>
+        <a href="ask-api-report-screening.html">Screening</a>
+        <a href="ask-api-report-signed.html">Signed</a>
+        <a href="ask-api-report-Submission.html">Submission</a>
+        <a href="ask-api-report-withdrawn.html">Withdrawn</a>
+    </div>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="content">
+
+<div id="dashboard" class="card">
+
+<h2>🚀 Total Test Case Summary</h2>
+
+<!-- SUMMARY CARDS -->
+<div class="summary">
+
+    <div class="summaryCard totalCard">
+        Total Test Cases<br>
+        <span id="totalCases" style="font-size:30px"></span>
+    </div>
+
+    <div class="summaryCard groupCard">
+        Total Prompt Groups<br>
+        <span id="totalGroups" style="font-size:30px"></span>
+    </div>
+
+</div>
+
+<!-- TABLE -->
+<table>
+<thead>
+<tr>
+<th>Prompt Group</th>
+<th>Total Test Cases</th>
+</tr>
+</thead>
+
+<tbody id="testTable"></tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* ---------- DATA ---------- */
+const testData = [
+    { group:"Compliance", total:35 },
+    { group:"Credentialing", total:35 },
+    { group:"Denied", total:35 },
+    { group:"Facility Interview", total:35 },
+    { group:"HWL Interview", total:35 },
+    { group:"Interview", total:40 },
+    { group:"Offer", total:35 },
+    { group:"Offer Facility", total:35 },
+    { group:"Offer With Agency", total:35 },
+    { group:"Onboarded", total:35 },
+    { group:"Orientation", total:35 },
+    { group:"Screening", total:35 },
+    { group:"Signed", total:35 },
+    { group:"Submission", total:35 },
+    { group:"Withdrawn", total:35 }
+];
+
+/* ---------- DASHBOARD ---------- */
+function showDashboard(){
+
+    const table=document.getElementById("testTable");
+    table.innerHTML="";
+
+    let grandTotal=0;
+
+    testData.forEach(item=>{
+        grandTotal+=item.total;
+
+        table.innerHTML+=`
+        <tr>
+            <td>${item.group}</td>
+            <td><b>${item.total}</b></td>
+        </tr>`;
+    });
+
+    document.getElementById("totalCases").innerText=grandTotal;
+    document.getElementById("totalGroups").innerText=testData.length;
+}
+
+/* LOAD DEFAULT */
+showDashboard();
+
+</script>
+
+</body>
+</html>
