@@ -1,0 +1,1101 @@
+
+  <html>
+  <head>
+  <title>AI Ask API Report</title>
+
+  <style>
+
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background:#fafafa;
+    }
+
+    h2 {
+      color:#333;
+    }
+
+    table {
+      border-collapse: collapse;
+      width:100%;
+      background:white;
+    }
+
+    th, td {
+      border:1px solid #ccc;
+      padding:8px;
+      text-align:left;
+      vertical-align: top;
+    }
+
+    th {
+      background:#222;
+      color:white;
+      position: sticky;
+      top: 0;
+    }
+
+    /* PASS FAIL COLORS */
+    .PASS { background:#e6ffe6; }
+    .FAIL { background:#ffe6e6; }
+
+    /* JSON RESPONSE BOX */
+    .jsonBox {
+      max-height:200px;
+      overflow:auto;
+      background:#f4f4f4;
+      padding:10px;
+      font-size:12px;
+      white-space:pre-wrap;
+      border-radius:4px;
+    }
+
+    details {
+      cursor:pointer;
+    }
+
+    summary {
+      font-weight:bold;
+      color:#0b5ed7;
+      margin-bottom:5px;
+    }
+
+  </style>
+  </head>
+
+  <body>
+
+  <h2>AI Ask API Report — Interview</h2>
+
+  <table>
+    <tr>
+      <th>API</th>
+      <th>Prompt Group</th>
+      <th>Test Case Type</th>
+      <th>Question</th>
+      <th>Actual Response</th>
+      <th>Expected</th>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>give me the list of candidates who are in interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>5380 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>show candidates currently in interview stage</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7233 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>list all candidates under interview process</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>9989 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>display candidates in interview status</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>4427 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>get candidates who are scheduled for interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7218 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>which candidates are in interview phase</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7401 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>fetch interview stage candidates</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7810 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>provide candidates currently in interview pipeline</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>6634 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>retrieve all candidates marked for interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7894 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>show interview candidates list</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>6892 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>display interview-phase candidate details</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7773 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>find candidates whose status is interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>6681 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>return candidates currently in interview round</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7221 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>list candidates where workflow stage equals interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7432 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>get interview candidates filtered by status</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you specify which status you want to filter the interview candidates by? For example, 'screening', 'offer', or 'signed'.",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>8265 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>show all candidates attending interviews</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>8641 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>provide interview-stage candidate records</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>4787 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>extract candidates currently under interview review</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>8429 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>return candidate profiles in interview phase</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>5957 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>query candidates API for interview status</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7489 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>filter candidates by interview stage</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7153 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>identify candidates whose pipeline stage is interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7205 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>show interview-stage candidates with details</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7050 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>retrieve candidates currently being interviewed</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7359 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>generate report of candidates in interview status</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7360 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>provide structured list of interview candidates</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7179 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>list profiles currently in interview workflow</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>7580 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>show candidates waiting for interview evaluation</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>8354 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>fetch candidates whose stage equals interview</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>6418 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>positive</td>
+        <td>display interview candidates along with key information</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>[object Object]</td>
+        <td>6980 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td></td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-25T11:24:17.654015",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Invalid question</td>
+        <td>2050 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td> </td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Invalid question</td>
+        <td>5256 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>123456789</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "The request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Invalid question</td>
+        <td>6861 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>@@@@@</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Invalid question</td>
+        <td>7276 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>show me cricket scores</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Unsupported query</td>
+        <td>7550 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>delete all interview candidates</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Unauthorized request</td>
+        <td>7077 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>drop candidates table</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Unauthorized request</td>
+        <td>7045 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>show candidates in unknownStage</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you specify the pipeline stage you are interested in, such as screening, interview, or offer?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>No data found</td>
+        <td>8765 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>hack system database</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "Request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Unsupported query</td>
+        <td>6961 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>Interview</td>
+        <td>negative</td>
+        <td>null</td>
+
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-25T11:25:16.524269",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <td>Invalid question</td>
+        <td>2068 ms</td>
+        <td>FAIL</td>
+      </tr>
+    
+
+  </table>
+
+  </body>
+  </html>
+  

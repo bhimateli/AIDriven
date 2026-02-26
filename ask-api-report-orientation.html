@@ -1,0 +1,1487 @@
+
+  <html>
+  <head>
+  <title>AI Ask API Report</title>
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background:#fafafa;
+    }
+
+    h2 {
+      color:#333;
+      margin-bottom:20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width:100%;
+      background:white;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      border:1px solid #ddd;
+      padding:8px;
+      text-align:left;
+      vertical-align: top;
+    }
+
+    th {
+      background:#222;
+      color:white;
+      position: sticky;
+      top: 0;
+      z-index:2;
+    }
+
+    /* PASS FAIL COLORS */
+    tr.PASS { background:#e9ffe9; }
+    tr.FAIL { background:#ffe9e9; }
+
+    .status {
+      font-weight:bold;
+      text-align:center;
+    }
+
+    .PASS .status { color:green; }
+    .FAIL .status { color:red; }
+
+    /* JSON RESPONSE BOX */
+    .jsonBox {
+      max-height:220px;
+      overflow:auto;
+      background:#f4f4f4;
+      padding:10px;
+      font-size:12px;
+      white-space:pre-wrap;
+      border-radius:6px;
+      border:1px solid #e0e0e0;
+    }
+
+    details {
+      cursor:pointer;
+    }
+
+    summary {
+      font-weight:bold;
+      color:#0b5ed7;
+      margin-bottom:6px;
+    }
+
+  </style>
+  </head>
+
+  <body>
+
+  <h2>AI Ask API Report — orientation</h2>
+
+  <table>
+    <tr>
+      <th>API</th>
+      <th>Prompt Group</th>
+      <th>Test Case Type</th>
+      <th>Question</th>
+      <th>Actual Response</th>
+      <th>Expected</th>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>give me the list of candidates who are in orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>4807 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>show candidates in orientation stage</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7278 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>list candidates under orientation process</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7207 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>display candidates whose status is orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7202 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>get candidates currently in orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7897 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>which candidates are in orientation phase</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7072 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>fetch orientation candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6974 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>provide orientation stage candidate details</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7480 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>giv me orientaion candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7353 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>show canddates in orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7284 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>lsit orientation candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6690 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>orienation candidates list</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7536 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>canditates in orientation step</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7157 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>orienttion stage candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>8000 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>SHOW ORIENTATION CANDIDATES</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6711 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>Orientation candidates?</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7476 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>   show candidates by orientation   </td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6844 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>generate report of candidates in orientation stage</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7377 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>retrieve candidates marked as orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6955 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>query candidates api for orientation status</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7648 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>return candidates attending orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7208 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>onboarded candidates now in orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6940 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>offer accepted candidates waiting for orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7605 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>interview cleared candidates attending orientation</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7473 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>positive</td>
+        <td>show profiles progressing into orientation phase</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "orientation"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6845 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td></td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-26T03:22:41.983818",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>2099 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td> </td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>5377 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>123456</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you please specify what information you need about '123456'? Are you looking for candidates, requisition details, or something else?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>7224 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>@@@@@@</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>7309 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>show me weather forecast</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>7344 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>delete orientation candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Are you looking to view candidates currently in the orientation stage, or is there another action you want to take with these candidates?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>7722 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>drop orientation table</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>6591 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>hack recruitment portal</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>8073 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>show candidates in unknownOrientationStage</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you please specify the correct pipeline stage you are interested in, such as 'orientation' or another stage?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"No data found"
+          </pre>
+        </td>
+
+        <td>6664 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>orientation</td>
+        <td>negative</td>
+        <td>-</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-26T03:23:40.383499",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>2084 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+
+  </table>
+
+  </body>
+  </html>
+  

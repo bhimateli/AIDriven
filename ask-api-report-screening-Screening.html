@@ -1,0 +1,600 @@
+
+  <html>
+  <head>
+  <style>
+    body { font-family: Arial }
+    table { border-collapse: collapse; width:100% }
+    th,td { border:1px solid #ccc; padding:8px }
+    th { background:#222; color:white }
+  </style>
+  </head>
+  <body>
+  <h2>AI Ask API Report</h2>
+  <table>
+    <tr>
+      <th>API</th>
+      <th>Prompt Group</th>
+      <th>Test Case Type</th>
+      <th>Question</th>
+      <th>Actual Response</th>
+      <th>Expected</th>
+    </tr>
+    
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show me candidates by Screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>list candidates in screening stage</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>display candidates under screening process</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>who are the candidates currently in screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>get screening candidates</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show candidates awaiting screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>fetch candidates filtered by screening status</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>provide screening stage candidate details</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>can you show candidates who passed resume screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>I want to see candidates in screening phase</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>please show screening candidates</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>which applicants are in screening stage right now</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show screening candidates list</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>give me candidates under screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>retrieve screening phase candidates</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show all candidates in screening pipeline</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>list screening applicants</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>display screening candidate records</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show candidates with status screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>find candidates in screening stage</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>screening stage candidates please</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>SCREENING candidates list</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>Show Me Candidates By Screening</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>screening candidates?</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>   show candidates by screening   </td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>could you fetch screening candidates for me</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show candidates currently under screening review</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>list all screening stage profiles</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>give screening phase candidate list</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>positive</td>
+      <td>show the candidates waiting for screening evaluation</td>
+      <td><pre>{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "screening"
+  },
+  "return_type": 1
+}</pre></td>
+      <td>Screening List</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td></td>
+      <td><pre>{
+  "status": 500,
+  "timestamp": "2026-02-25T10:02:01.883678",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}</pre></td>
+      <td>Invalid question</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td> </td>
+      <td><pre>{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}</pre></td>
+      <td>Invalid question</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>123456789</td>
+      <td><pre>{
+  "error": "The request is outside the supported domain.",
+  "return_type": 0
+}</pre></td>
+      <td>Invalid question</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>@@@@@</td>
+      <td><pre>{
+  "error": "Unsupported input",
+  "return_type": 0
+}</pre></td>
+      <td>Invalid question</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>show me pizza recipes</td>
+      <td><pre>{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}</pre></td>
+      <td>Unsupported query</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>delete all candidates</td>
+      <td><pre>{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}</pre></td>
+      <td>Unauthorized request</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>drop database candidates</td>
+      <td><pre>{
+  "error": "Request is outside the supported domain.",
+  "return_type": 0
+}</pre></td>
+      <td>Unauthorized request</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>show candidates by unknownStage</td>
+      <td><pre>{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you specify the pipeline stage you are interested in, such as screening, interview, or offer?",
+  "return_type": 2
+}</pre></td>
+      <td>No data found</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>hack the system</td>
+      <td><pre>{
+  "error": "Request is outside the supported domain.",
+  "return_type": 0
+}</pre></td>
+      <td>Unsupported query</td>
+    </tr>
+  
+    <tr>
+      <td>/api/ask</td>
+      <td>screening</td>
+       <td>negative</td>
+      <td>null</td>
+      <td><pre>{
+  "status": 500,
+  "timestamp": "2026-02-25T10:02:59.376705",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}</pre></td>
+      <td>Invalid question</td>
+    </tr>
+  
+  </table>
+  </body>
+  </html>
+  

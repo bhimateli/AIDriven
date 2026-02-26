@@ -1,0 +1,1486 @@
+
+  <html>
+  <head>
+  <title>AI Ask API Report</title>
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background:#fafafa;
+    }
+
+    h2 {
+      color:#333;
+      margin-bottom:20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width:100%;
+      background:white;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      border:1px solid #ddd;
+      padding:8px;
+      text-align:left;
+      vertical-align: top;
+    }
+
+    th {
+      background:#222;
+      color:white;
+      position: sticky;
+      top: 0;
+      z-index:2;
+    }
+
+    /* PASS FAIL COLORS */
+    tr.PASS { background:#e9ffe9; }
+    tr.FAIL { background:#ffe9e9; }
+
+    .status {
+      font-weight:bold;
+      text-align:center;
+    }
+
+    .PASS .status { color:green; }
+    .FAIL .status { color:red; }
+
+    /* JSON RESPONSE BOX */
+    .jsonBox {
+      max-height:220px;
+      overflow:auto;
+      background:#f4f4f4;
+      padding:10px;
+      font-size:12px;
+      white-space:pre-wrap;
+      border-radius:6px;
+      border:1px solid #e0e0e0;
+    }
+
+    details {
+      cursor:pointer;
+    }
+
+    summary {
+      font-weight:bold;
+      color:#0b5ed7;
+      margin-bottom:6px;
+    }
+
+  </style>
+  </head>
+
+  <body>
+
+  <h2>AI Ask API Report — signed</h2>
+
+  <table>
+    <tr>
+      <th>API</th>
+      <th>Prompt Group</th>
+      <th>Test Case Type</th>
+      <th>Question</th>
+      <th>Actual Response</th>
+      <th>Expected</th>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>give me the list of candidates who have signed the offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>3198 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>show candidates who signed the offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6655 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>list candidates with signed offers</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7136 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>display candidates whose offer is signed</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7361 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>get candidates who completed offer signing</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>9641 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>which candidates have signed their offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>4852 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>fetch signed offer candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7856 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>provide signed candidates list</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6475 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>giv me candidates who hav signed offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7416 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>show canddates who signed offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7474 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>lsit candidates with signed offers</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6880 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>signed ofer candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7595 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>candidates who signd the offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7145 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>canditates with signed offer</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7304 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>offer signd candidates list</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7332 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>SHOW SIGNED OFFER CANDIDATES</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7164 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>Signed candidates?</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7042 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>   show candidates who signed the offer   </td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>8141 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>can you fetch candidates with signed offers</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6434 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>please provide signed offer profiles</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7526 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>return candidates who finalized offer signing</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7161 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>generate report of signed candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>7157 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>list profiles with completed offer signing</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>8486 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>query candidates api for signed status</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6440 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>positive</td>
+        <td>show signed offer stage candidate records</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "signed"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>6810 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td></td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-25T12:37:19.207751",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>2077 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td> </td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>7119 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>123456</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you please specify what information you need about the requisition number 123456?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>8908 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>@@@@@@</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "polite_reply_v1",
+  "message": "Hello! How can I assist you with your business inquiries today?",
+  "return_type": 3
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>4069 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>show me stock prices</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain of the BI system.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>6996 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>delete signed candidates</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "This request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>7656 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>drop hiring database</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "Request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>6681 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>hack recruitment portal</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "error": "Request is outside the supported domain.",
+  "return_type": 0
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>7318 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="FAIL">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>show candidates in randomSignedStage</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "intent_schema_id": "clarification_required_v1",
+  "message": "Could you please specify the correct pipeline stage you are interested in, such as 'signed', 'interview', or 'offer'?",
+  "return_type": 2
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"No data found"
+          </pre>
+        </td>
+
+        <td>8274 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
+      </tr>
+    
+      <tr class="PASS">
+        <td>/api/ask</td>
+        <td>signed</td>
+        <td>negative</td>
+        <td>-</td>
+
+        <!-- ACTUAL RESPONSE -->
+        <td>
+          <details>
+            <summary>View Response</summary>
+            <pre class="jsonBox">
+{
+  "status": 500,
+  "timestamp": "2026-02-25T12:38:18.345514",
+  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+}
+            </pre>
+          </details>
+        </td>
+
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>2110 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
+      </tr>
+    
+
+  </table>
+
+  </body>
+  </html>
+  
