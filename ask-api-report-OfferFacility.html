@@ -92,7 +92,7 @@
     </tr>
 
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -106,8 +106,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Here is the list of candidates who are in the offer with facility stage.",
   "return_type": 1
 }
             </pre>
@@ -127,14 +130,14 @@
           </pre>
         </td>
 
-        <td>3823 ms</td>
+        <td>18191 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -148,8 +151,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates who are currently in the offer stage, with details about their associated facilities.",
   "return_type": 1
 }
             </pre>
@@ -169,10 +175,10 @@
           </pre>
         </td>
 
-        <td>3456 ms</td>
+        <td>18646 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -190,9 +196,13 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer",
-    "include_denied_withdrawn": false
+    "pipeline_stage": [
+      "offer",
+      "offer_with_agency",
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently under the offer stage process, including details about the facilities they are associated with.",
   "return_type": 1
 }
             </pre>
@@ -212,14 +222,14 @@
           </pre>
         </td>
 
-        <td>3908 ms</td>
+        <td>20365 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -233,8 +243,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Displaying candidates currently in the offer with facility stage.",
   "return_type": 1
 }
             </pre>
@@ -254,14 +267,14 @@
           </pre>
         </td>
 
-        <td>4384 ms</td>
+        <td>17815 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -275,8 +288,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who have received offers with facility involvement.",
   "return_type": 1
 }
             </pre>
@@ -296,14 +312,14 @@
           </pre>
         </td>
 
-        <td>3602 ms</td>
+        <td>18342 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -317,8 +333,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the offer phase with facilities.",
   "return_type": 1
 }
             </pre>
@@ -338,10 +357,10 @@
           </pre>
         </td>
 
-        <td>4148 ms</td>
+        <td>18017 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -359,8 +378,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer"
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Fetching candidates who are at the offer stage, along with their respective facilities.",
   "return_type": 1
 }
             </pre>
@@ -380,14 +402,14 @@
           </pre>
         </td>
 
-        <td>3277 ms</td>
+        <td>19352 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -401,8 +423,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the offer stage, along with their associated facility details.",
   "return_type": 1
 }
             </pre>
@@ -422,14 +447,14 @@
           </pre>
         </td>
 
-        <td>3991 ms</td>
+        <td>18120 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -443,8 +468,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Retrieving all candidates currently marked at the 'offer with facility' stage.",
   "return_type": 1
 }
             </pre>
@@ -464,10 +492,10 @@
           </pre>
         </td>
 
-        <td>3476 ms</td>
+        <td>18525 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -483,12 +511,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "intent_schema_id": "candidates_by_stage_v1",
+  "intent_schema_id": "clarification_required_v1",
   "intent": {
-    "pipeline_stage": "offer",
-    "include_denied_withdrawn": true
+    "message": "Do you want details on candidates who are currently in the offer stage with specific facilities, or are you interested in the facility benefits associated with these offers?"
   },
-  "return_type": 1
+  "return_type": 2
 }
             </pre>
           </details>
@@ -507,7 +534,7 @@
           </pre>
         </td>
 
-        <td>3412 ms</td>
+        <td>19562 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -528,9 +555,13 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer",
-    "facility": null
+    "pipeline_stage": [
+      "offer",
+      "offer_with_agency",
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Displaying candidates in the offer phase across all facilities.",
   "return_type": 1
 }
             </pre>
@@ -550,14 +581,14 @@
           </pre>
         </td>
 
-        <td>3728 ms</td>
+        <td>18226 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -571,8 +602,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently at the offer with facility stage.",
   "return_type": 1
 }
             </pre>
@@ -592,14 +626,14 @@
           </pre>
         </td>
 
-        <td>4583 ms</td>
+        <td>18530 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -613,8 +647,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the offer stage with facilities.",
   "return_type": 1
 }
             </pre>
@@ -634,14 +671,14 @@
           </pre>
         </td>
 
-        <td>3486 ms</td>
+        <td>25488 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -655,8 +692,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates whose current workflow stage is 'offer with facility'.",
   "return_type": 1
 }
             </pre>
@@ -676,10 +716,10 @@
           </pre>
         </td>
 
-        <td>3428 ms</td>
+        <td>12089 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -696,7 +736,9 @@
             <pre class="jsonBox">
 {
   "intent_schema_id": "clarification_required_v1",
-  "message": "Could you please specify the facility name for which you want to filter the offer candidates?",
+  "intent": {
+    "message": "Do you want to see candidates in the offer stage for a specific facility or across all facilities?"
+  },
   "return_type": 2
 }
             </pre>
@@ -716,14 +758,14 @@
           </pre>
         </td>
 
-        <td>3599 ms</td>
+        <td>23753 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -737,8 +779,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Showing all candidates who accepted offers with facilities.",
   "return_type": 1
 }
             </pre>
@@ -758,10 +803,10 @@
           </pre>
         </td>
 
-        <td>3843 ms</td>
+        <td>14743 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -779,9 +824,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer",
-    "facility": null
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Providing candidate records at the offer stage, including associated facilities.",
   "return_type": 1
 }
             </pre>
@@ -801,14 +848,14 @@
           </pre>
         </td>
 
-        <td>7547 ms</td>
+        <td>17216 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -822,8 +869,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently under offer review with the facility.",
   "return_type": 1
 }
             </pre>
@@ -843,14 +893,14 @@
           </pre>
         </td>
 
-        <td>7208 ms</td>
+        <td>19333 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -864,8 +914,13 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer",
+      "offer_with_agency",
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Returning candidates currently in the offer stage and its variations with facility benefits.",
   "return_type": 1
 }
             </pre>
@@ -885,14 +940,14 @@
           </pre>
         </td>
 
-        <td>7159 ms</td>
+        <td>18526 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -906,8 +961,12 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer"
+    ],
+    "facility": null
   },
+  "user_query_acknowledgment": "Showing candidates at the offer stage across all facilities.",
   "return_type": 1
 }
             </pre>
@@ -927,10 +986,10 @@
           </pre>
         </td>
 
-        <td>7644 ms</td>
+        <td>18829 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -946,9 +1005,15 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "intent_schema_id": "clarification_required_v1",
-  "message": "Which facility should I filter the candidates by?",
-  "return_type": 2
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": [
+      "offer"
+    ],
+    "facility": null
+  },
+  "user_query_acknowledgment": "Listing candidates at the offer stage for all facilities.",
+  "return_type": 1
 }
             </pre>
           </details>
@@ -967,14 +1032,14 @@
           </pre>
         </td>
 
-        <td>7510 ms</td>
+        <td>18954 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -988,8 +1053,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently at the offer with facility stage in the pipeline.",
   "return_type": 1
 }
             </pre>
@@ -1009,10 +1077,10 @@
           </pre>
         </td>
 
-        <td>6705 ms</td>
+        <td>125403 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -1030,8 +1098,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer"
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Displaying candidates at the offer stage along with their facility information.",
   "return_type": 1
 }
             </pre>
@@ -1051,14 +1122,14 @@
           </pre>
         </td>
 
-        <td>7190 ms</td>
+        <td>2264 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -1072,8 +1143,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Retrieving candidates who are currently in the offer stage with facilities.",
   "return_type": 1
 }
             </pre>
@@ -1093,14 +1167,14 @@
           </pre>
         </td>
 
-        <td>7219 ms</td>
+        <td>2137 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -1114,8 +1188,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Generating a report of candidates who are in the offer stage with the facility.",
   "return_type": 1
 }
             </pre>
@@ -1135,14 +1212,14 @@
           </pre>
         </td>
 
-        <td>10771 ms</td>
+        <td>9725 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -1156,8 +1233,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are at the offer stage, including the associated facilities.",
   "return_type": 1
 }
             </pre>
@@ -1177,10 +1257,10 @@
           </pre>
         </td>
 
-        <td>3790 ms</td>
+        <td>17992 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -1198,9 +1278,13 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer",
-    "include_denied_withdrawn": false
+    "pipeline_stage": [
+      "offer",
+      "offer_with_agency",
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Listing profiles currently in the offer workflow stages, including facilities.",
   "return_type": 1
 }
             </pre>
@@ -1220,14 +1304,14 @@
           </pre>
         </td>
 
-        <td>7878 ms</td>
+        <td>20714 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -1241,8 +1325,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates waiting for offer approval with facilities.",
   "return_type": 1
 }
             </pre>
@@ -1262,14 +1349,14 @@
           </pre>
         </td>
 
-        <td>7802 ms</td>
+        <td>17089 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>positive</td>
@@ -1283,8 +1370,11 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "offer with facility"
+    "pipeline_stage": [
+      "offer_with_facility"
+    ]
   },
+  "user_query_acknowledgment": "Fetching candidates currently in the offer with facility stage.",
   "return_type": 1
 }
             </pre>
@@ -1304,10 +1394,10 @@
           </pre>
         </td>
 
-        <td>6252 ms</td>
+        <td>18236 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -1324,7 +1414,9 @@
             <pre class="jsonBox">
 {
   "intent_schema_id": "clarification_required_v1",
-  "message": "Are you looking for candidates at the offer stage, or do you need information about the benefits offered by the facility?",
+  "intent": {
+    "message": "Do you want to list candidates at the offer stage or details about facility benefits? Please specify."
+  },
   "return_type": 2
 }
             </pre>
@@ -1344,7 +1436,7 @@
           </pre>
         </td>
 
-        <td>7324 ms</td>
+        <td>18839 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -1362,11 +1454,7 @@
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "status": 500,
-  "timestamp": "2026-02-26T10:02:30.488004",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
@@ -1378,14 +1466,14 @@
           </pre>
         </td>
 
-        <td>2061 ms</td>
+        <td>24 ms</td>
 
         <td class="status PASS">
           PASS
         </td>
       </tr>
     
-      <tr class="FAIL">
+      <tr class="PASS">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>negative</td>
@@ -1396,11 +1484,7 @@
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "intent_schema_id": "polite_reply_v1",
-  "message": "Hello! How can I assist you with your business inquiries today?",
-  "return_type": 3
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
@@ -1412,10 +1496,10 @@
           </pre>
         </td>
 
-        <td>5119 ms</td>
+        <td>15 ms</td>
 
-        <td class="status FAIL">
-          FAIL
+        <td class="status PASS">
+          PASS
         </td>
       </tr>
     
@@ -1431,8 +1515,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "The request is outside the supported domain.",
-  "return_type": 0
+  "intent_schema_id": "clarification_required_v1",
+  "intent": {
+    "message": "Could you please provide more context or specify what information you are looking for related to the number 123456789?"
+  },
+  "return_type": 2
 }
             </pre>
           </details>
@@ -1445,7 +1532,7 @@
           </pre>
         </td>
 
-        <td>7755 ms</td>
+        <td>18900 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -1464,8 +1551,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "Unsupported input",
-  "return_type": 0
+  "intent_schema_id": "polite_reply_v1",
+  "intent": {
+    "message": "Hello! How can I assist you with your business inquiries today?"
+  },
+  "return_type": 3
 }
             </pre>
           </details>
@@ -1478,7 +1568,7 @@
           </pre>
         </td>
 
-        <td>6924 ms</td>
+        <td>18131 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -1497,7 +1587,10 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "This request is outside the supported domain.",
+  "error": "error_v1",
+  "intent": {
+    "message": "I'm unable to provide weather forecasts. Please refer to a weather service for that information."
+  },
   "return_type": 0
 }
             </pre>
@@ -1511,7 +1604,7 @@
           </pre>
         </td>
 
-        <td>6927 ms</td>
+        <td>19144 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -1531,7 +1624,9 @@
             <pre class="jsonBox">
 {
   "intent_schema_id": "clarification_required_v1",
-  "message": "Are you looking to view candidates at the offer stage, or is there another action you want to take with them?",
+  "intent": {
+    "message": "Are you asking to view candidates at the offer stage or perform an operation? Please clarify your intent."
+  },
   "return_type": 2
 }
             </pre>
@@ -1545,7 +1640,7 @@
           </pre>
         </td>
 
-        <td>7699 ms</td>
+        <td>18497 ms</td>
 
         <td class="status FAIL">
           FAIL
@@ -1564,8 +1659,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "This request is outside the supported domain.",
-  "return_type": 0
+  "intent_schema_id": "clarification_required_v1",
+  "intent": {
+    "message": "Could you clarify whether you are referring to removing candidates in the offer stage from a list or something else related to offers?"
+  },
+  "return_type": 2
 }
             </pre>
           </details>
@@ -1578,14 +1676,14 @@
           </pre>
         </td>
 
-        <td>6906 ms</td>
+        <td>18569 ms</td>
 
         <td class="status FAIL">
           FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>negative</td>
@@ -1597,9 +1695,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "status": 500,
-  "timestamp": "2026-02-26T10:03:18.794873",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+  "intent_schema_id": "clarification_required_v1",
+  "intent": {
+    "message": "I could not find a pipeline stage named 'unknownOfferStage'. Do you mean 'offer' or another stage like 'offer_with_agency' or 'offer_with_facility'?"
+  },
+  "return_type": 2
 }
             </pre>
           </details>
@@ -1612,14 +1712,14 @@
           </pre>
         </td>
 
-        <td>6964 ms</td>
+        <td>18741 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
-      <tr class="PASS">
+      <tr class="FAIL">
         <td>/api/ask</td>
         <td>OfferFacility</td>
         <td>negative</td>
@@ -1631,9 +1731,11 @@
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "status": 500,
-  "timestamp": "2026-02-26T10:03:23.626924",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
+  "error": "error_v1",
+  "intent": {
+    "message": "I'm unable to assist with that request."
+  },
+  "return_type": 0
 }
             </pre>
           </details>
@@ -1646,10 +1748,10 @@
           </pre>
         </td>
 
-        <td>4832 ms</td>
+        <td>18437 ms</td>
 
-        <td class="status PASS">
-          PASS
+        <td class="status FAIL">
+          FAIL
         </td>
       </tr>
     
@@ -1664,11 +1766,7 @@
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "status": 500,
-  "timestamp": "2026-02-26T10:03:25.691369",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
@@ -1680,7 +1778,7 @@
           </pre>
         </td>
 
-        <td>2063 ms</td>
+        <td>21 ms</td>
 
         <td class="status PASS">
           PASS

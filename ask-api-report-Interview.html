@@ -6,23 +6,25 @@
   <style>
 
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       padding: 20px;
       background:#fafafa;
     }
 
     h2 {
       color:#333;
+      margin-bottom:20px;
     }
 
     table {
       border-collapse: collapse;
       width:100%;
       background:white;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
     }
 
     th, td {
-      border:1px solid #ccc;
+      border:1px solid #ddd;
       padding:8px;
       text-align:left;
       vertical-align: top;
@@ -33,21 +35,31 @@
       color:white;
       position: sticky;
       top: 0;
+      z-index:2;
     }
 
     /* PASS FAIL COLORS */
-    .PASS { background:#e6ffe6; }
-    .FAIL { background:#ffe6e6; }
+    tr.PASS { background:#e9ffe9; }
+    tr.FAIL { background:#ffe9e9; }
+
+    .status {
+      font-weight:bold;
+      text-align:center;
+    }
+
+    .PASS .status { color:green; }
+    .FAIL .status { color:red; }
 
     /* JSON RESPONSE BOX */
     .jsonBox {
-      max-height:200px;
+      max-height:220px;
       overflow:auto;
       background:#f4f4f4;
       padding:10px;
       font-size:12px;
       white-space:pre-wrap;
-      border-radius:4px;
+      border-radius:6px;
+      border:1px solid #e0e0e0;
     }
 
     details {
@@ -57,7 +69,7 @@
     summary {
       font-weight:bold;
       color:#0b5ed7;
-      margin-bottom:5px;
+      margin-bottom:6px;
     }
 
   </style>
@@ -86,6 +98,7 @@
         <td>positive</td>
         <td>give me the list of candidates who are in interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -93,17 +106,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>5380 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>2705 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -112,6 +143,7 @@
         <td>positive</td>
         <td>show candidates currently in interview stage</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -119,17 +151,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview stage across all requisitions and filters.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7233 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>2306 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -138,6 +188,7 @@
         <td>positive</td>
         <td>list all candidates under interview process</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -145,17 +196,37 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview",
+      "facility_interview",
+      "hwl_interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing all candidates currently under the interview process across all requisitions and facilities.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>9989 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>2561 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -164,6 +235,7 @@
         <td>positive</td>
         <td>display candidates in interview status</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -171,17 +243,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Retrieving candidates currently in the interview stage of the onboarding pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>4427 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>10457 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -190,6 +280,7 @@
         <td>positive</td>
         <td>get candidates who are scheduled for interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -197,17 +288,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are scheduled for the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7218 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18506 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -216,6 +325,7 @@
         <td>positive</td>
         <td>which candidates are in interview phase</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -223,17 +333,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview phase across all requisitions.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7401 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18770 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -242,6 +370,7 @@
         <td>positive</td>
         <td>fetch interview stage candidates</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -249,17 +378,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview stage of the onboarding pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7810 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18543 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -268,6 +415,7 @@
         <td>positive</td>
         <td>provide candidates currently in interview pipeline</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -275,17 +423,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates currently in the interview pipeline stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>6634 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18715 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -294,6 +460,7 @@
         <td>positive</td>
         <td>retrieve all candidates marked for interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -301,17 +468,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Retrieving all candidates currently marked for interview in the pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7894 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18923 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -320,6 +505,7 @@
         <td>positive</td>
         <td>show interview candidates list</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -327,17 +513,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently at the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>6892 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18934 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -346,6 +550,7 @@
         <td>positive</td>
         <td>display interview-phase candidate details</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -353,17 +558,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates currently in the interview phase across all requisitions and systems.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7773 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>19349 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -372,6 +595,7 @@
         <td>positive</td>
         <td>find candidates whose status is interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -379,17 +603,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>6681 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>17618 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -398,6 +640,7 @@
         <td>positive</td>
         <td>return candidates currently in interview round</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -405,17 +648,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview stage of the pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7221 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18400 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -424,6 +685,7 @@
         <td>positive</td>
         <td>list candidates where workflow stage equals interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -431,17 +693,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently at the interview stage in the onboarding process.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7432 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18990 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -450,22 +730,40 @@
         <td>positive</td>
         <td>get interview candidates filtered by status</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
   "intent_schema_id": "clarification_required_v1",
-  "message": "Could you specify which status you want to filter the interview candidates by? For example, 'screening', 'offer', or 'signed'.",
+  "intent": {
+    "message": "Could you specify which status you want to filter by, such as open, closed, or another status?"
+  },
   "return_type": 2
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>8265 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>19129 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -474,6 +772,7 @@
         <td>positive</td>
         <td>show all candidates attending interviews</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -481,17 +780,37 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview",
+      "facility_interview",
+      "hwl_interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing all candidates currently attending interviews across all stages.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>8641 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>25394 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -500,6 +819,7 @@
         <td>positive</td>
         <td>provide interview-stage candidate records</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -507,17 +827,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Providing candidate records currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>4787 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>11670 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -526,6 +864,7 @@
         <td>positive</td>
         <td>extract candidates currently under interview review</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -533,17 +872,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently under interview review.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>8429 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>19041 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -552,6 +909,7 @@
         <td>positive</td>
         <td>return candidate profiles in interview phase</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -559,17 +917,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Returning candidate profiles currently in the interview phase of the onboarding pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>5957 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18327 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -578,6 +954,7 @@
         <td>positive</td>
         <td>query candidates API for interview status</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -585,17 +962,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently at the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7489 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18857 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -604,6 +999,7 @@
         <td>positive</td>
         <td>filter candidates by interview stage</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -611,17 +1007,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7153 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18512 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -630,6 +1044,7 @@
         <td>positive</td>
         <td>identify candidates whose pipeline stage is interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -637,17 +1052,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Fetching candidates who are currently in the interview stage of the pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7205 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18387 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -656,6 +1089,7 @@
         <td>positive</td>
         <td>show interview-stage candidates with details</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -663,17 +1097,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the interview stage, showing available details for each.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7050 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18982 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -682,6 +1134,7 @@
         <td>positive</td>
         <td>retrieve candidates currently being interviewed</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -689,17 +1142,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7359 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>19186 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -708,6 +1179,7 @@
         <td>positive</td>
         <td>generate report of candidates in interview status</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -715,17 +1187,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates who are currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7360 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18407 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -734,6 +1224,7 @@
         <td>positive</td>
         <td>provide structured list of interview candidates</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -741,17 +1232,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing candidates currently in the interview stage.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7179 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18512 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -760,6 +1269,7 @@
         <td>positive</td>
         <td>list profiles currently in interview workflow</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -767,17 +1277,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Listing profiles currently in the interview stage of the candidate pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>7580 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18628 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -786,6 +1314,7 @@
         <td>positive</td>
         <td>show candidates waiting for interview evaluation</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -793,17 +1322,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates currently in the interview stage awaiting further evaluation.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>8354 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>18439 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -812,6 +1359,7 @@
         <td>positive</td>
         <td>fetch candidates whose stage equals interview</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -819,17 +1367,35 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Showing candidates who are at the interview stage in the onboarding pipeline.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>6418 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>19228 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -838,6 +1404,7 @@
         <td>positive</td>
         <td>display interview candidates along with key information</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
@@ -845,65 +1412,95 @@
 {
   "intent_schema_id": "candidates_by_stage_v1",
   "intent": {
-    "pipeline_stage": "interview"
+    "pipeline_stage": [
+      "interview"
+    ]
   },
+  "user_query_acknowledgment": "Displaying candidates currently in the interview stage along with key information.",
   "return_type": 1
 }
             </pre>
           </details>
         </td>
 
-        <td>[object Object]</td>
-        <td>6980 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+{
+  "intent_schema_id": "candidates_by_stage_v1",
+  "intent": {
+    "pipeline_stage": "interview"
+  },
+  "return_type": 1
+}
+          </pre>
+        </td>
+
+        <td>29205 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
-      <tr class="FAIL">
+      <tr class="PASS">
         <td>/api/ask</td>
         <td>Interview</td>
         <td>negative</td>
         <td></td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "status": 500,
-  "timestamp": "2026-02-25T11:24:17.654015",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
 
-        <td>Invalid question</td>
-        <td>2050 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>28 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
       </tr>
     
-      <tr class="FAIL">
+      <tr class="PASS">
         <td>/api/ask</td>
         <td>Interview</td>
         <td>negative</td>
         <td> </td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "intent_schema_id": "polite_reply_v1",
-  "message": "Hello! How can I assist you with your business inquiries today?",
-  "return_type": 3
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
 
-        <td>Invalid question</td>
-        <td>5256 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>26 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -912,21 +1509,34 @@
         <td>negative</td>
         <td>123456789</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "The request is outside the supported domain.",
+  "error": "error_v1",
+  "intent": {
+    "message": "Invalid input; please provide a clear business question or request."
+  },
   "return_type": 0
 }
             </pre>
           </details>
         </td>
 
-        <td>Invalid question</td>
-        <td>6861 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>8640 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -935,22 +1545,34 @@
         <td>negative</td>
         <td>@@@@@</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "intent_schema_id": "polite_reply_v1",
-  "message": "Hello! How can I assist you with your business inquiries today?",
-  "return_type": 3
+  "error": "error_v1",
+  "intent": {
+    "message": "Request is outside the supported domain."
+  },
+  "return_type": 0
 }
             </pre>
           </details>
         </td>
 
-        <td>Invalid question</td>
-        <td>7276 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>17500 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -959,21 +1581,34 @@
         <td>negative</td>
         <td>show me cricket scores</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "This request is outside the supported domain.",
+  "error": "error_v1",
+  "intent": {
+    "message": "This system is designed for business intelligence queries only and does not provide sports scores."
+  },
   "return_type": 0
 }
             </pre>
           </details>
         </td>
 
-        <td>Unsupported query</td>
-        <td>7550 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>19487 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -982,21 +1617,34 @@
         <td>negative</td>
         <td>delete all interview candidates</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "This request is outside the supported domain.",
-  "return_type": 0
+  "intent_schema_id": "clarification_required_v1",
+  "intent": {
+    "message": "Are you looking to manage candidates currently in the interview stage or requesting a summary report on them? This system can only view and report data, not perform deletions."
+  },
+  "return_type": 2
 }
             </pre>
           </details>
         </td>
 
-        <td>Unauthorized request</td>
-        <td>7077 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>19059 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -1005,21 +1653,34 @@
         <td>negative</td>
         <td>drop candidates table</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "This request is outside the supported domain.",
+  "error": "error_v1",
+  "intent": {
+    "message": "The request to drop a database table is outside the BI system's supported domain."
+  },
   "return_type": 0
 }
             </pre>
           </details>
         </td>
 
-        <td>Unauthorized request</td>
-        <td>7045 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unauthorized request"
+          </pre>
+        </td>
+
+        <td>22372 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -1028,22 +1689,34 @@
         <td>negative</td>
         <td>show candidates in unknownStage</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
   "intent_schema_id": "clarification_required_v1",
-  "message": "Could you specify the pipeline stage you are interested in, such as screening, interview, or offer?",
+  "intent": {
+    "message": "The requested stage 'unknownStage' is not recognized. Could you specify one of the known pipeline stages such as 'interview', 'offer', or 'onboarded'?"
+  },
   "return_type": 2
 }
             </pre>
           </details>
         </td>
 
-        <td>No data found</td>
-        <td>8765 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"No data found"
+          </pre>
+        </td>
+
+        <td>14535 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
       <tr class="FAIL">
@@ -1052,45 +1725,64 @@
         <td>negative</td>
         <td>hack system database</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
 {
-  "error": "Request is outside the supported domain.",
+  "error": "error_v1",
+  "intent": {
+    "message": "The request is outside the supported domain."
+  },
   "return_type": 0
 }
             </pre>
           </details>
         </td>
 
-        <td>Unsupported query</td>
-        <td>6961 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Unsupported query"
+          </pre>
+        </td>
+
+        <td>18843 ms</td>
+
+        <td class="status FAIL">
+          FAIL
+        </td>
       </tr>
     
-      <tr class="FAIL">
+      <tr class="PASS">
         <td>/api/ask</td>
         <td>Interview</td>
         <td>negative</td>
-        <td>null</td>
+        <td>-</td>
 
+        <!-- ACTUAL RESPONSE -->
         <td>
           <details>
             <summary>View Response</summary>
             <pre class="jsonBox">
-{
-  "status": 500,
-  "timestamp": "2026-02-25T11:25:16.524269",
-  "message": "HTTP error to LLM_SERVICE_NAME - service: LLM_SERVICE_NAME, url: http://localhost:8082/llm/ask_to_llm, error: 500 Server Error: Internal Server Error for url: http://localhost:8082/llm/ask_to_llm"
-}
+"Invalid JSON"
             </pre>
           </details>
         </td>
 
-        <td>Invalid question</td>
-        <td>2068 ms</td>
-        <td>FAIL</td>
+        <!-- EXPECTED RESPONSE -->
+        <td>
+          <pre class="jsonBox">
+"Invalid question"
+          </pre>
+        </td>
+
+        <td>16 ms</td>
+
+        <td class="status PASS">
+          PASS
+        </td>
       </tr>
     
 
